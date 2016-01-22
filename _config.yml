@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
-	extensions: ["tables"]
+extensions: ["tables"]
 
 # Permalinks
 permalink:        pretty
