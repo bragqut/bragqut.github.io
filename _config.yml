@@ -9,9 +9,9 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            BRAG QUT
+title:            One Weird Tip
 tagline:          'One Weird Tip'
-description:      'This research group discovered the secret to more efficient data analysis'
+description:      'This statistics research group discovered the secret to more efficient data processing an analysis. Computer scientists hate them!'
 url:              http://bragqut.github.io
 baseurl:          /
 
