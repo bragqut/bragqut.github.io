@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:            One Weird Tip
 tagline:          'One Weird Tip'
-description:      'This statistics research group discovered the secret to more efficient data processing an analysis. Computer scientists hate them!'
+description:      'This statistics research group discovered the secret to more efficient data processing and analysis. Computer scientists hate them!'
 url:              http://bragqut.github.io
 baseurl:          /
 
