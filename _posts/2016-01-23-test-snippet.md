@@ -5,16 +5,12 @@ title: Test Post with a little R Code
 
 
 ### Description
-The purpose of your code snippet, what it does etc.
-
-
-### Dependencies
-i.e. any `library( )` calls your code snippet makes or data it needs to load
+Creates a rainbow coloured scatterplot with existing R functions that do the same (i.e. an entirely pointless example function).
 
 ### Code Snippet
 Your code snippet itself:
 ```r
-PL.f <- function(x = rnorm(50), y = rnorm(50)) {
+PL.f <- function(x = rnorm(200), y = rnorm(200)) {
   # Creates scatter plot of two vectors colouring points by element order 
   if (!(length(x) == length(y))) {
     stop('please supply numeric vectors of the same length to arguments x and y')
