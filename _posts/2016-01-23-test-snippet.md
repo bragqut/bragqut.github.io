@@ -24,4 +24,4 @@ How do I get the indenting to work? In my IDE I have the line starting `col.v = 
 		  
 ### Images
 
-How should be do these - it's bad practise to have files that can't be merged in a Git repository I believe so we should host the images somewhere else?
+How should we do these - it's bad practise to have files that can't be merged in a Git repository I believe so we should host the images somewhere else?
