@@ -12,13 +12,13 @@ title: Test Post with a little R Code
 i.e. any `library( )` calls you need to make
 
 ### Code Snippet
-```
+<pre><code>
 Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
                      if(length(x) == length(y)){
 		          col.v = rainbow(length(x))
 		          plot(x, y, col = col.v)} else{
 		          print('please supply numeric vectors of the same length to arguments x and y')}}
-```
+</code></pre>
 
 		  
 ### Images
