@@ -18,7 +18,7 @@ Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
                                   col.v = rainbow(length(x))
                                   plot(x, y, col = col.v)} else{
                                     print('please supply numeric vectors of the same length to arguments x and y')}}
-```r
+```
 
 Forcing the issue of indenting only with spaces seems to do the trick.
 Though this isn't a pretty function layout, I was just messing around to try and see if I could get what I see in my IDE reflected exactly on the webpage.
