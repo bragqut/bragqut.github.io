@@ -20,7 +20,7 @@ Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
 		          print('please supply numeric vectors of the same length to arguments x and y')}}
 </code></pre>
 
-How do I get the indenting to work? In my IDE I have the line starting <code>col.v = <\code> indented so that the <code>c<\code> of <code>col.v<\code> is directly below the <code>n<\code> of the <code>length<\code> of the line above.  I'm doing this indenting with spaces but it doesn't work. Any ideas? (Is there some equivalent to the <code>\verbatim<\code> environemt of LaTeX?
+How do I get the indenting to work? In my IDE I have the line starting `col.v = ` indented so that the `c` of `col.v` is directly below the `n` of the `length` of the line above.  I'm doing this indenting with spaces but it doesn't work. Any ideas? (Is there some equivalent to the `\verbatim` environemt of LaTeX?
 		  
 ### Images
 
