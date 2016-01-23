@@ -13,11 +13,11 @@ i.e. any `library( )` calls you need to make
 
 ### Code Snippet
 ```r
-Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
-                             if(length(x) == length(y)){
-                                  col.v = rainbow(length(x))
-                                  plot(x, y, col = col.v)} else{
-                                    print('please supply numeric vectors of the same length to arguments x and y')}}
+PL.f <- function(x = rnorm(50),y = rnorm(50)){
+  if(!(length(x) == length(y))){
+    return(c('please supply numeric vectors of the same length to arguments x and y'))}
+  col.v = rainbow(length(x))
+  plot(x, y, col = col.v)}
 ```
 
 Forcing the issue of indenting only with spaces seems to do the trick.
