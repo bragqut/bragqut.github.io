@@ -4,9 +4,9 @@ title: Test Post with a little R Code
 ---
 
 
-<div class="message">
-  The purpose of your code snippet.
-</div>
+### Description
+The purpose of your code snippet, what it does etc.
+
 
 ### Dependencies
 i.e. any `library( )` calls your code snippet makes or data it needs to load
