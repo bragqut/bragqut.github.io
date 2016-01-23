@@ -13,7 +13,7 @@ i.e. any `library( )` calls you need to make
 
 ### Code Snippet
 ```r
-PL.f <- function(x = rnorm(50),y = rnorm(50)){
+PL.f <- function(x = rnorm(50), y = rnorm(50)){
   if(!(length(x) == length(y))){
     return(c('please supply numeric vectors of the same length to arguments x and y'))}
   col.v = rainbow(length(x))
@@ -22,7 +22,7 @@ PL.f <- function(x = rnorm(50),y = rnorm(50)){
 
 Forcing the issue of indenting only with spaces seems to do the trick.
 Though this isn't a pretty function layout, I was just messing around to try and see if I could get what I see in my IDE reflected exactly on the webpage.
-Maybe we should recommend a style guide for code snippets.
+Maybe we should recommend a style guide for code snippets e.g. [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 
 ### Images
 
