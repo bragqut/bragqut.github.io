@@ -14,10 +14,10 @@ i.e. any `library( )` calls you need to make
 ### Code Snippet
 ```r
 Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
-if(length(x) == length(y)){
-col.v = rainbow(length(x))
-plot(x, y, col = col.v)} else{
-print('please supply numeric vectors of the same length to arguments x and y')}}
+                             if(length(x) == length(y)){
+                                  col.v = rainbow(length(x))
+                                  plot(x, y, col = col.v)} else{
+                                    print('please supply numeric vectors of the same length to arguments x and y')}}
 ```r
 
 How do I get the indenting to work? In my IDE I have the line starting `col.v = ` indented so that the `c` of `col.v` is directly below the `n` of the `length` of the line above.  I'm doing this indenting with spaces but it doesn't work. Any ideas? (Is there some equivalent to the `\verbatim` environemt of LaTeX?
