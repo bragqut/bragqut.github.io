@@ -12,7 +12,7 @@ title: Test Post with a little R Code
 i.e. any `library( )` calls you need to make
 
 ### Code Snippet
-```R
+```
 Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
                      if(length(x) == length(y)){
 		          col.v = rainbow(length(x))
