@@ -5,13 +5,14 @@ title: Test Post with a little R Code
 
 
 <div class="message">
-  So we can put an introductory message here introducing our code snippet e.g. what it's for if it requires a certain package.
+  The purpose of your code snippet.
 </div>
 
 ### Dependencies
-i.e. any `library( )` calls you need to make
+i.e. any `library( )` calls your code snippet makes or data it needs to load
 
 ### Code Snippet
+Your code snippet itself:
 ```r
 PL.f <- function(x = rnorm(50), y = rnorm(50)) {
   # Creates scatter plot of two vectors colouring points by element order 
@@ -23,10 +24,13 @@ PL.f <- function(x = rnorm(50), y = rnorm(50)) {
 }
 ```
 
-Forcing the issue of indenting only with spaces seems to do the trick.
-Though this isn't a pretty function layout, I was just messing around to try and see if I could get what I see in my IDE reflected exactly on the webpage.
+If you indent with spaces alone what you see is what you should get on the webpage.
 Maybe we should recommend a style guide for code snippets e.g. [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 
 ### Images
 
 How should we do these - it's bad practise to have files that can't be merged in a Git repository I believe so we should host the images somewhere else?
+tierneyn suggests: 
+The images problem could be sovled by adding a folder called “assets”, and then we link to that folder using liquid syntax:
+something like `{{site.url}}/assets/imagename.jpg`
+
