@@ -20,8 +20,10 @@ Pointless.func <- function(x = rnorm(50),y = rnorm(50)){
                                     print('please supply numeric vectors of the same length to arguments x and y')}}
 ```r
 
-How do I get the indenting to work? In my IDE I have the line starting `col.v = ` indented so that the `c` of `col.v` is directly below the `n` of the `length` of the line above.  I'm doing this indenting with spaces but it doesn't work. Any ideas? (Is there some equivalent to the `\verbatim` environemt of LaTeX?
-		  
+Forcing the issue of indenting only with spaces seems to do the trick.
+Though this isn't a pretty function layout, I was just messing around to try and see if I could get what I see in my IDE reflected exactly on the webpage.
+Maybe we should recommend a style guide for code snippets.
+
 ### Images
 
 How should we do these - it's bad practise to have files that can't be merged in a Git repository I believe so we should host the images somewhere else?
