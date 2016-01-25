@@ -3,8 +3,8 @@ layout: post
 title: Small intro
 ---
 
-Introduction
-============
+### Introduction
+
 
 The code here is provided so that you can copy and paste it into R and run it yourself. While all output is provided, it's only there to show you what you *should* be getting, and is not intended as a substitute for actually running the code. Data analysis isn't learned by passively watching someone else do it, so make sure you attempt to run the code.
 
@@ -12,16 +12,14 @@ As this is a work in progress, additional sections will be written progressively
 
 Any questions, suggestions or requests can be directed to Dr Samuel Clifford[1].
 
-Preparation
-===========
+### Preparation
 
-Installing R
-------------
+#### Installing R
+
 
 Download and install the latest version of R[2] and RStudio[3] from the internet. The reason we're using RStudio rather than default R is that the default GUI for R dates to the 1990s and the script editor has almost no features.
 
-Installing and loading packages within R
-----------------------------------------
+#### Installing and loading packages within R
 
 Once RStudio is installed and open, we will need to install some extra packages that extend the functionality of R.
 
@@ -53,8 +51,8 @@ The above code blocks will install and load the following libraries (and their d
 
 If you see any error messages about missing packages, you'll likely need to install them before proceeding with the remainder of the tutorial.
 
-Loading the data
-================
+#### Loading the data
+
 
 The `openair` library contains a dataset called `mydata`, which we will use to demonstrate the use of R. This data was collected from 1 January 1998 to 23 June 2005 at the Marylebone (London) air quality monitoring station.
 
