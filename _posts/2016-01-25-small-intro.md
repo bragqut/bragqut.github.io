@@ -1,3 +1,8 @@
+---
+layout: post
+title: Small intro
+---
+
 Introduction
 ============
 
