@@ -1,6 +1,7 @@
 module Jekyll
   class Site
 
+  
     def pages_by_tag
       tag_ref = {}
       self.pages.each do |page|
