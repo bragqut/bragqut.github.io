@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Post with a little R Code
+title: Small intro
 ---
 
 
