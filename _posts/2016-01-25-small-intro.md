@@ -65,7 +65,7 @@ While we can look at data as text, it is incredibly boring to do so. Let's use t
 ggplot(data=mydata, aes(x=date, y=pm10)) + geom_line()
 ```
 
-<img src="small_files/figure-markdown_github/unnamed-chunk-4-1.png" alt="Time series of PM10 data"  />
+<img src="2016/01/25/small-intro/small_files/figure-markdown_github/unnamed-chunk-4-1.png" alt="Time series of PM10 data"  />
 <p class="caption">
 Time series of PM10 data
 </p>
