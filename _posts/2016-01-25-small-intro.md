@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Small intro
+tags:
+- R
+- ggplot2
+- visualisation
 ---
 
 ### Introduction
