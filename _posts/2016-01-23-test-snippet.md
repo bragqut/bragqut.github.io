@@ -10,11 +10,11 @@ Creates a rainbow coloured scatterplot with existing R functions that do the sam
 ### Code Snippet
 Your code snippet itself:
 ```r
-PL.f <- function(x = rnorm(200), y = rnorm(200)) {
-  # Creates scatter plot of two vectors colouring points by element order 
-  if (!(length(x) == length(y))) {
+PL.f <- function(x = rnorm(200), y = rnorm(200)){
+  # Creates scatter plot of two vectors colouring points by element order
+  if (!(length(x) == length(y))){
     stop('please supply numeric vectors of the same length to arguments x and y')
-    }
+  }
   col.v = rainbow(length(x))
   plot(x, y, col = col.v)
 }
