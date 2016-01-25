@@ -11,6 +11,9 @@ The code here is provided so that you can copy and paste it into R and run it yo
 As this is a work in progress, additional sections will be written progressively. Good textbook resources include Diggle and Chetwynd's "Statistics and Scientific Method", for a general overview of modern data analysis, MacGillivray, Utts and Heckard's "Mind on Statistics", for a first year statistics course reference, and Dobson and Barnett's "An Introduction to Generalized Linear Models", for a more thorough grounding in statistical theory and the toolkit of the modern scientist.
 
 Any questions, suggestions or requests can be directed to Dr Samuel Clifford[1].
+<!---
+how do we get footnotes to be links?
+-->
 
 ### Preparation
 
