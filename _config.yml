@@ -9,15 +9,15 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            One Weird Tip
-tagline:          'One Weird Tip'
+title:            One weiRd tip
+tagline:          'One weiRd tip'
 description:      'This statistics research group discovered the secret to more efficient data processing and analysis. Computer scientists hate them!'
 url:              http://bragqut.github.io
 baseurl:          /
 
 author:
-  name:           'Sam Clifford'
-  url:            http://samclifford.info
+  name:           'Bayesian Research and Applications Group'
+  url:            http://bragqut.wordpress.com
 
 paginate:         5
 
