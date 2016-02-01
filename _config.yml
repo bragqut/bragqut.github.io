@@ -15,14 +15,14 @@ description:      'This statistics research group discovered the secret to more 
 url:              http://bragqut.github.io
 baseurl:          /
 
-author:
-  name:           'Bayesian Research and Applications Group'
-  url:            http://bragqut.wordpress.com
+#author:
+#  name:           'Bayesian Research and Applications Group'
+#  url:            http://bragqut.wordpress.com
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          2.1.1
 
 github:
   repo:           https://github.com/bragqut/bragqut.github.io

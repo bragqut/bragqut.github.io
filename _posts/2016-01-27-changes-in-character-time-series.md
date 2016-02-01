@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Changes in character time series
-author: Sam Clifford
+author: samclifford
 ---
 
 ### Description
