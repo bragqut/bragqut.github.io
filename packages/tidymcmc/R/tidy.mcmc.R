@@ -13,7 +13,7 @@
 tidy.mcmc <- function(x, q=c(0.025, 0.5, 0.975)){
 
   # generate summary statistics
-  x.s <- coda::summary.mcmc(x, q=q)
+  x.s <- summary(x, q=q)
 
   # pull out mean and quantiles
   x.df <- data.frame(Mean=x.s$statistics[, "Mean"],

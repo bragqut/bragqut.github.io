@@ -1,7 +1,7 @@
 Package: tidymcmc
 Type: Package
 Title: Turning MCMC Summaries Into Tidy Data Frames
-Version: 0.1
+Version: 0.12
 Date: 2016-02-01
 Author: Sam Clifford
 Maintainer: Sam Clifford <samuel.clifford@qut.edu.au>
