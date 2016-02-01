@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Small intro
-author: Sam Clifford
+author: samclifford
 tags:
 - R
 - ggplot2
