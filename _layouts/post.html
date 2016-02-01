@@ -12,12 +12,19 @@ layout: default
         <!-- Personal Info. -->
         Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
     </span>
+
+  	<div class="meta">
+		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+		<span class="author">{{ author.display_name }}</span>
+	</div>
+
 {% endif %}
 <!-- end just added -->
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+	
   {{ content }}
 </div>
 
@@ -36,13 +43,3 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-
-{% assign author = site.authors[page.author] %}
-<div class="post">
-	<div class="meta">
-		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-		<span class="author">{{ author.display_name }}</span>
-	</div>
-	{{ content }}
-</div>
-
