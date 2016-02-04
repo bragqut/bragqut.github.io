@@ -17,10 +17,7 @@ title: Home
 	
 	{% assign author = site.authors[post.author] %}
 
-	<div class="meta">
-		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-		<span class="author"><a href="{{author.web}}" >{{ author.display_name }}</a></span>
-    </div>
+	{% include authorinfo.html %}
 	
     {{ post.content }}
   </div>
