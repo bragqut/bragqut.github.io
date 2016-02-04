@@ -2,10 +2,7 @@
 layout: post
 title: Small intro
 author: samclifford
-tags:
-- R
-- ggplot2
-- visualisation
+tags: [R, ggplot2, visualisation]
 ---
 
 Once RStudio is installed and open, we will need to install some extra packages that extend the functionality of R.

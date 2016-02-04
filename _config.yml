@@ -2,7 +2,9 @@
 markdown:         kramdown
 highlighter:      pygments
 extensions: ["tables"]
-gems: [jekyll-paginate]
+gems: 
+ - jekyll-paginate
+ - jekyll-gist
 
 # Permalinks
 permalink:        pretty
