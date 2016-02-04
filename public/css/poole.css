@@ -352,14 +352,6 @@ tbody tr:nth-child(odd) th {
   color: #9a9a9a;
 }
 
-.post-meta{
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #9a9a9a;
-}
-
-
 /* Related posts */
 .related {
   padding-top: 2rem;

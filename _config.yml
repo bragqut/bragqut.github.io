@@ -22,7 +22,7 @@ baseurl:          /
 paginate:         5
 
 # Custom vars
-version:          2.1.1
+version:          2.1.2
 
 github:
   repo:           https://github.com/bragqut/bragqut.github.io

@@ -2,30 +2,11 @@
 layout: default
 ---
 
-<!-- just added -->
-<!-- Look the author details up from the site config. -->
-{% assign author = site.data.authors[page.author] %}
-
-<!-- Output author details if some exist. -->
-{% if author %}
-    <span>
-        <!-- Personal Info. -->
-        Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
-    </span>
-
-  	<div class="meta">
-		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-		herf derf
-		<span class="author">{{ author.display_name }}</span>
-	</div>
-
-{% endif %}
-<!-- end just added -->
+{% include tag_collector.html tag_separator=',' %}
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-	
+  <span class="post-date">{{ page.date | date_to_string }} | {{ tag_list }}</span>
   {{ content }}
 </div>
 
@@ -35,7 +16,7 @@ layout: default
     {% for post in site.related_posts limit:3 %}
       <li>
         <h3>
-          <a href="{{ post.url }}">
+          <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
             <small>{{ post.date | date_to_string }}</small>
           </a>
