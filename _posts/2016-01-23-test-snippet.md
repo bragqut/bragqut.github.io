@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Small intro
+title: Test Snippet
 author: brfitzpatrick
 ---
 
