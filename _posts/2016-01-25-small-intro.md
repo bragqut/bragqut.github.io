@@ -8,7 +8,7 @@ tags:
  - visualisation
 ---
 
-Once RStudio is installed and open, we will need to install some extra packages that extend the functionality of R.
+Assuming you've got RStudio installed and open, we will install some extra packages that extend the functionality of R.
 
 ``` r
 install.packages(c("ggplot2", "openair"))
@@ -24,15 +24,10 @@ The above code blocks will install and load the following libraries (and their d
 
 The `openair` library contains a dataset called `mydata`, which we will use to demonstrate the use of R. This data was collected from 1 January 1998 to 23 June 2005 at the Marylebone (London) air quality monitoring station.
 
-We'll use the `data` command to tell R to load the dataset.
+We'll use the `data` command to tell R to load the dataset and use the `ggplot2` library to visualise our data.
 
 ``` r
 data(mydata)
-```
-
-While we can look at data as text, it is incredibly boring to do so. Let's use the `ggplot2` library to visualise our data. We had a look at the `date` and `pm10` variables above, so let's plot them
-
-``` r
 ggplot(data=mydata, aes(x=date, y=pm10)) + geom_line()
 ```
 
@@ -40,3 +35,5 @@ ggplot(data=mydata, aes(x=date, y=pm10)) + geom_line()
 <p class="caption">
 Time series of PM10 data
 </p>
+
+You can find out more about the ggplot2 package at http://docs.ggplot2.org/
