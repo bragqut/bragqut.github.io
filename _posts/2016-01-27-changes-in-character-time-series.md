@@ -2,7 +2,7 @@
 layout: post
 title: Changes in character time series
 author: samclifford
-tags: [r, tips]
+tags: [r]
 ---
 
 ### Description
