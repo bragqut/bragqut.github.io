@@ -14,7 +14,14 @@ title: Home
 
     {% include tag_collector.html tag_separator=',' %}
     <span class="post-date">{{ post.date | date_to_string }} | {{ tag_list }}</span>
+	
+	{% assign author = site.authors[page.author] %}
 
+	<div class="meta">
+		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+		<span class="author">{{ author.display_name }}</span>
+    </div>
+	
     {{ post.content }}
   </div>
   {% endfor %}
