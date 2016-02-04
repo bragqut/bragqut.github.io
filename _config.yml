@@ -14,7 +14,7 @@ title:            One weiRd tip
 tagline:          'Cut the time it takes to analyse data'
 description:      'This statistics research group discovered the secret to more efficient data processing and analysis. Computer scientists hate them!'
 url:              http://bragqut.github.io
-baseurl:          ''
+baseurl:          /
 
 #author:
 #  name:           'Bayesian Research and Applications Group'
