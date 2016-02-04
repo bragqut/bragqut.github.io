@@ -36,4 +36,4 @@ ggplot(data=mydata, aes(x=date, y=pm10)) + geom_line()
 Time series of PM10 data
 </p>
 
-You can find out more about the ggplot2 package at http://docs.ggplot2.org/
+You can find out more about the ggplot2 package at <http://docs.ggplot2.org/>
