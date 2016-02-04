@@ -4,9 +4,17 @@ layout: default
 
 {% include tag_collector.html tag_separator=',' %}
 
+{% assign author = site.authors[page.author] %}
+
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }} | {{ tag_list }}</span>
+  
+  <div class="meta">
+		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+		<span class="author">{{ author.display_name }}</span>
+	</div>
+	
   {{ content }}
 </div>
 
