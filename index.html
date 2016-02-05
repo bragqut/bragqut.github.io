@@ -20,7 +20,6 @@ title: Home
 	{% include authorinfo.html %}
 	
 	
-	
 	{% if post.content | post_contains_excerpt_tag %}
 	
 	  <p class="excerpt">
@@ -28,9 +27,9 @@ title: Home
       </p>
 	
       <a href="{{ post.url }}">Read more →</a>
+	  
     {% endif %}
 	
-    
   </div>
   {% endfor %}
 </div>
