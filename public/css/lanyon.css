@@ -325,7 +325,7 @@ a.sidebar-nav-item:focus {
 
 /* Meta data line below post title */
 .post-date {
-  display: inline;
+  display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
