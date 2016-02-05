@@ -16,7 +16,13 @@ title: Home
 	
 	{% assign author = site.authors[post.author] %}
 
+	{% include commentscount.html %}
+
+	   
 	
+	
+	
+	{% include authorinfo.html %}
 	
 	{{ post.excerpt }}
 	
