@@ -20,9 +20,7 @@ title: Home
      
     <span class="post-date"> {{ post.date | date_to_string }} | <a href="{{author.web}}" >{{ author.display_name }}</a> | {{ tag_list }} | <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
   
-    {% include authorinfo.html %}
-	
-	{{ post.excerpt }}
+    {{ post.excerpt }}
 	
 	{% if post.content | post_contains_excerpt_tag %}
       <a href="{{ post.url }}">Read more →</a>
