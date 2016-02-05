@@ -32,6 +32,8 @@ version:          2.1.4
 github:
   repo:           https://github.com/bragqut/bragqut.github.io
 
+# excerpt separator
+excerpt_separator: <!--more-->  
   
 authors:
  samclifford:
