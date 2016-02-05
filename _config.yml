@@ -51,3 +51,10 @@ authors:
   web: 
   twitter: benrfitzpatrick
   github: brfitzpatrick
+  
+ defaults:
+  scope:
+   path: ""
+   type: "posts"
+  values:
+   comments: true
