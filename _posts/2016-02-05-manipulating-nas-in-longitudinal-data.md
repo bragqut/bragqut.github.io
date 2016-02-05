@@ -3,6 +3,7 @@ layout: post
 title: Manipulating NAs in longitudinal data
 author: samclifford
 tags:
+comments: True
  - r
  - dplyr
  - tidyr
