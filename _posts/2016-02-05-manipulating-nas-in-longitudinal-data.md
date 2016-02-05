@@ -2,7 +2,7 @@
 layout: post
 title: Manipulating NAs in longitudinal data
 author: samclifford
-comments: True
+comments: TRUE
 tags:
  - r
  - dplyr
