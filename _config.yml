@@ -57,4 +57,4 @@ authors:
    path: ""
    type: "posts"
   values:
-   comments: true
+   comments: "true"
