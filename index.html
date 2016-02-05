@@ -12,11 +12,13 @@ title: Home
       </a>
     </h1>
 
-    {% include tag_collector.html tag_separator=',' %}
-    <span class="post-date">{{ post.date | date_to_string }} | {{ tag_list }}</span>
-	
+	{% include tag_collector.html tag_separator=',' %}
 	{% include commentscount.html %}
-	<a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+		
+    <span class="post-date">{{ post.date | date_to_string }} | {{ tag_list }} | <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
+	
+	
+	
 	
 	{% assign author = site.authors[post.author] %}
 
