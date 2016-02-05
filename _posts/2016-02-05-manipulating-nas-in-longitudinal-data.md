@@ -56,7 +56,7 @@ head(X)
 Now that we've simulated some missing data, we'll reshape the data from wide to long format, making a new ID column to ensure that we are able to keep track of whose observations these are. We also convert the time information from strings with "X" in them to numbers, sort the remaining data frame by `ID` rather than `time` and filter out all the rows with missing `value` values.
 
 ``` r
-non_missing_data <- data.frame(X, ID=1:N) %>% 
+non_missing_data <- data.frame(X, ID=1:n.r) %>% 
   gather("time", "value", -ID) %>% 
   mutate(time = extract_numeric(time)) %>% 
   arrange(ID) %>% 
