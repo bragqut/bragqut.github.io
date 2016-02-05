@@ -89,7 +89,7 @@ group_by(non_missing_data, ID) %>%
   select(n) 
 ```
 
-    ## Source: local data frame [120 x 1]
+    ## Source: local data frame [30 x 1]
     ## 
     ##        n
     ##    (int)
