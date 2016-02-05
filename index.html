@@ -19,6 +19,10 @@ title: Home
 
 	{% include authorinfo.html %}
 	
+	{% if post.content | post_contains_excerpt_tag %}
+      <a href="{{ post.url }}">Read more →</a>
+    {% endif %}
+	
     {{ post.content }}
   </div>
   {% endfor %}
