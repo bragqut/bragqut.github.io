@@ -21,6 +21,8 @@ title: Home
 	
 	{{ post.excerpt }}
 	
+	<a href="{{ post.url }}">a butt lol</a>
+	
 	{% if post.content | post_contains_excerpt_tag %}
       <a href="{{ post.url }}">Read more →</a> WHAT EVEN
     {% endif %}
