@@ -11,7 +11,7 @@ layout: default
   
   {% include commentscount.html %}
      
-  <span class="post-date"> {{ page.date | date_to_string }} |  {{ tag_list }} | <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
+  <span class="post-date"> {{ page.date | date_to_string }} </span> <span class="author"><a href="{{author.web}}" >{{ author.display_name }}</a></span> | <span class="post-date"> {{ tag_list }} | <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
   
   {% include authorinfo.html %}
   
