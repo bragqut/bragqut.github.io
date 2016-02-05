@@ -9,6 +9,7 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }} | {{ tag_list }}</span>
+  <span class="post-author"> <a href="{{author.web}}" >{{ author.display_name }}</a> | <a href="https://github.com/{{author.github}}" ><img src="/assets/GitHub-Mark-32px.png"></a> </span>
   
   {% include authorinfo.html %}
 	
