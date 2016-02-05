@@ -14,7 +14,6 @@ Sometimes a longitudinal data set, e.g. patient information, doesn't have all su
 
 We'll make use of `tidyr` and `dplyr` to manipulate some simulated data.
 
-<!---excerpt-break-->
 
 ``` r
 library(tidyr)
