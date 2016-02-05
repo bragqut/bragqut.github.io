@@ -11,6 +11,9 @@ Sometimes in time series you have a set of states for which you may spend a cert
 
 A straight up factor to numeric conversion won't work, because we want to assume that returning to a previous value.
 
+
+<!---excerpt-break-->
+
 ### Code Snippet
 
 Turn the input variable into a numeric series, and then look at where it changes. Loop over the endpoints and sequentially increase a counter index between the endpoints.
