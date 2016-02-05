@@ -13,10 +13,10 @@ title: Home
     </h1>
 
 	{% include tag_collector.html tag_separator=',' %}
-	{% include commentscount.html %}
-		
-   
+	
 	{% assign author = site.authors[post.author] %}
+
+	{% include commentscount.html %}
 
 	{% include authorinfo.html %}
 	
