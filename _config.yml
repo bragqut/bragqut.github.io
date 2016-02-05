@@ -53,8 +53,9 @@ authors:
   github: brfitzpatrick
   
  defaults:
-  scope:
-   path: ""
-   type: "posts"
-  values:
-   comments: "true"
+  -
+   scope:
+    path: ""
+    type: "posts"
+   values:
+    comments: "true"
