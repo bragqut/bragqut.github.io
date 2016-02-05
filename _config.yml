@@ -6,7 +6,6 @@ gems:
  - jekyll-paginate
  - jekyll-gist
  - jekyll-sitemap
- - jekyll-bootstrap
 
 # Permalinks
 permalink:        pretty
@@ -53,7 +52,3 @@ authors:
   twitter: benrfitzpatrick
   github: brfitzpatrick
   
-comments :
-  provider : disqus
-  disqus :
-    short_name : bragqut
