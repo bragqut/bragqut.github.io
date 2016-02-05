@@ -19,11 +19,9 @@ title: Home
 
 	{% include authorinfo.html %}
 	
-	{% if post.content | post_contains_excerpt_tag? %}
+	{% if post.content | post_contains_excerpt_tag %}
 	  {{ post.excerpt }}
       <a href="{{ post.url }}">Read more →</a>
-	{% else %} 
-      {{ post.content }}
     {% endif %}
 	
 	
