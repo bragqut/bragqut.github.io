@@ -19,11 +19,14 @@ title: Home
 
 	{% include authorinfo.html %}
 	
-	<p class="excerpt">
-      {{ post.content | get_post_excerpt }}
-    </p>
+	
 	
 	{% if post.content | post_contains_excerpt_tag %}
+	
+	  <p class="excerpt">
+        {{ post.content | get_post_excerpt }}
+      </p>
+	
       <a href="{{ post.url }}">Read more →</a>
     {% endif %}
 	
