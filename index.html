@@ -15,6 +15,9 @@ title: Home
     {% include tag_collector.html tag_separator=',' %}
     <span class="post-date">{{ post.date | date_to_string }} | {{ tag_list }}</span>
 	
+	{% include commentscount.html %}
+	<a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+	
 	{% assign author = site.authors[post.author] %}
 
 	{% include authorinfo.html %}
