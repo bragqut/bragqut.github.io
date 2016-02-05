@@ -19,6 +19,10 @@ title: Home
 
 	{% include authorinfo.html %}
 	
+	{% if post.content | post_should_be_truncated? %}
+      <a href="{{ post.url }}">Read more →</a>
+    {% endif %}
+	
 	{{ post.excerpt }}
 	
 	

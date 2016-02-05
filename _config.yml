@@ -33,7 +33,7 @@ github:
   repo:           https://github.com/bragqut/bragqut.github.io
 
 # excerpt separator
-excerpt_separator: <!--more-->  
+excerpt_separator: <!---excerpt-break-->
   
 authors:
  samclifford:
