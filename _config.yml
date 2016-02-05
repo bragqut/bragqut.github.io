@@ -27,7 +27,7 @@ frontlinkurl:      http://bragqut.github.io
 paginate:         5
 
 # Custom vars
-version:          2.1.4
+# version:          2.1.4
 
 github:
   repo:           https://github.com/bragqut/bragqut.github.io
