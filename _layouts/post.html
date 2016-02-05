@@ -11,16 +11,10 @@ layout: default
   <span class="post-date">{{ page.date | date_to_string }} | {{ tag_list }}</span>
   
   {% include authorinfo.html %}
-  
-  <a href="{{author.web}}" >{{ author.display_name }}</a> | <a href="https://github.com/{{author.github}}" >GitHub</a> 
-   
 	
   {{ content }}
-  
-  
-  
+
   {% include comments.html %}
-  
   
 </div>
 
