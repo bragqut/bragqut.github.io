@@ -2,7 +2,6 @@
 layout: post
 title: Small intro
 author: samclifford
-comments: true
 tags: 
  - r
  - ggplot2
