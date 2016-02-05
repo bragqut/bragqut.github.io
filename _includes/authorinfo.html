@@ -1,5 +1,5 @@
 <div class="meta">
-		<span class="author"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=32"></span>
-		
-		<a href="https://github.com/{{author.github}}" >GitHub</a> 
+        <span class="post-date">date: {{ page.date | date_to_string }} | author: <a href="{{author.web}}" >{{ author.display_name }}</a>  | tags: {{ tag_list }} | <a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
+		<span class="author"><a href="https://github.com/{{author.github}}" ><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=32"></a> </span>
+	
 </div>
