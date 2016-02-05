@@ -11,7 +11,7 @@ tags:
 This snippet was motivated by a hack that Marcela Cespedes presented to BRAG on 4 February 2016. Sometimes a longitudinal data set, e.g. patient information, doesn't have all subjects observed at all time points. Here's a way of generating an index of patient IDs corresponding to non-missing response values which may be useful for analysis with JAGS.
 
 We'll make use of `tidyr` and `dplyr` to manipulate some simulated data.
-
+<!---excerpt-break-->
 ``` r
 library(tidyr)
 library(dplyr)
