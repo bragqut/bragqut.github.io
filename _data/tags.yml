@@ -15,3 +15,9 @@
 
 - slug: visualisation
   name: visualisation
+
+- slug: dplyr
+  name: dplyr
+
+- slug: tidyr
+  name: tidyr
