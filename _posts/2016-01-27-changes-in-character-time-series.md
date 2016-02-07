@@ -24,7 +24,7 @@ First we're going to simulate some data that behaves the way we discussed above.
 ``` r
 N <- 10
 
-labels <- letters[sample(x = 1:3, size = N, replace = T)]
+labels <- letters[sample(x = 1:4, size = N, replace = T)]
 
 n.each <- rpois(n=N, lambda=40)
 
@@ -58,17 +58,45 @@ detect_text_changes <- function(x){
 }
 
 my.x <- mutate(my.x, label.new = detect_text_changes(label))
-
-ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label, group=label.new)) + theme(legend.position="bottom")
-
-
-ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label, group=label.new)) + facet_grid(. ~ label)
 ```
 
-We can now summarise either by label without distinguising between unique instances or summarise by instance.
+Let's plot with our new labelling scheme
+
+``` r
+ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label, group=label.new)) + theme(legend.position="bottom")
+```
+
+![](detect_files/figure-markdown_github/unnamed-chunk-4-1.png)
+ We can now summarise either by label without distinguising between unique instances or summarise by instance.
 
 ``` r
 my.x %>% group_by(label) %>% summarise(mean = mean(y)) 
+```
 
+    ## Source: local data frame [4 x 2]
+    ## 
+    ##    label        mean
+    ##   (fctr)       (dbl)
+    ## 1      a -0.01950181
+    ## 2      b  0.15706226
+    ## 3      c -0.06210777
+    ## 4      d  0.01293803
+
+``` r
 my.x %>% group_by(label.new, label) %>% summarise(mean = mean(y)) %>% arrange(label.new)
 ```
+
+    ## Source: local data frame [9 x 3]
+    ## Groups: label.new [9]
+    ## 
+    ##   label.new  label         mean
+    ##       (dbl) (fctr)        (dbl)
+    ## 1         1      d  0.108663695
+    ## 2         2      b  0.198499260
+    ## 3         3      a  0.046210382
+    ## 4         4      d -0.101932775
+    ## 5         5      c -0.004878618
+    ## 6         6      a  0.022771377
+    ## 7         7      b  0.118516222
+    ## 8         8      a -0.076240612
+    ## 9         9      c -0.145498828
