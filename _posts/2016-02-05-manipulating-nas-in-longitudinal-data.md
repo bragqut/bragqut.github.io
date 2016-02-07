@@ -16,7 +16,6 @@ We'll make use of `tidyr` and `dplyr` to manipulate some simulated data.
 library(tidyr)
 library(dplyr)
 
-# simulate some data
 n.r <- 30 # how many subjects
 n.c <- 4 # how many sequential observations
 
@@ -35,8 +34,9 @@ head(X)
     ## [5,] -1.07686357  0.3279826 -0.9131584 -1.7212478
     ## [6,] -0.03247079  0.1207207  0.6485075 -0.3668982
 
+	
+Now we simulate missingness at random
 ``` r
-# knock out some values as being missing
 X[sample(1:N, size = N/4)] <- NA
 
 head(X)
