@@ -28,6 +28,8 @@ tags:
 ```
 to help categorise your posts for easier searching. To ensure there's a page that lists all the posts with this tag, you need to run `_tools/createTag tagname`, replacing `tagname` with the name of the tag you want to create. This will generate an .md file in `tag` and some extra lines in `_data/tags.yml`.
 
+You can also add your own author details in `_config.yml` so that when you list yourself under that author name, e.g. `samclifford` in your post's YAML header it pulls the relevant info to add to the post's header.
+
 Using either the GitHub desktop app or the command line interface, add the created files (the post's .md and tags' .md files) to your local git repository and commit changes with a meaningful message. If you're already a member of the `bragqut` team on GitHub you will be able to push directly to the repository. If you're not already a contributor to `bragqut/bragqut.github.io` you can submit a pull request and one of us will pull your changes in, or pester Sam to add you to the GitHub team.
 
 You can also fork the entire project and make your own website, as trying to build everything from the ground up can be time consuming (but it is rewarding).
