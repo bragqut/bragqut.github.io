@@ -10,22 +10,22 @@ This page is hosted on GitHub Pages, which means if you want to use it you'll ne
 
 Use the following template as your markdown header and save as an `.Rmd` file with a title of the form `YYYY-MM-DD-title-of-file`.
 <!---excerpt-break-->
-```
----
-title: "your_document_title"
-author: "your_name"
-output: 
- md_document:
-  variant: markdown_github
----
-```
+
+    ---
+	title: "your_document_title"
+	author: "your_name"
+	output: 
+     md_document:
+      variant: markdown_github  
+    ---
+
 
 Once you've written your markdown file, Knit it to generate the `.md` file which you can copy and paste into the `_posts/` folder in your local git repository. You can add tags as follows:
-``` 
-tags:
- - ggplot2
- - visualisation
-```
+
+    tags:
+     - ggplot2
+     - visualisation
+ 
 to help categorise your posts for easier searching. To ensure there's a page that lists all the posts with this tag, you need to run `_tools/createTag tagname`, replacing `tagname` with the name of the tag you want to create. This will generate an .md file in `tag` and some extra lines in `_data/tags.yml`.
 
 You can also add your own author details in `_config.yml` so that when you list yourself under that author name, e.g. `samclifford` in your post's YAML header it pulls the relevant info to add to the post's header. Copy and paste your Gravatar ID in and you'll get a nice little picture associated with you for each of your posts.
