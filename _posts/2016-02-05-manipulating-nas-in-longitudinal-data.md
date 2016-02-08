@@ -12,19 +12,19 @@ This snippet was motivated by a hack that Marcela Cespedes presented to BRAG on 
 
 We'll make use of `tidyr` and `dplyr` to manipulate some simulated data.
 <!---excerpt-break-->
-``` r
-library(tidyr)
-library(dplyr)
 
-n.r <- 30 # how many subjects
-n.c <- 4 # how many sequential observations
+    library(tidyr)
+    library(dplyr)
 
-N <- n.r*n.c
+    n.r <- 30 # how many subjects
+    n.c <- 4 # how many sequential observations
 
-X <- matrix(rnorm(N), nrow = n.r, ncol=n.c)
+    N <- n.r*n.c
 
-head(X)
-```
+    X <- matrix(rnorm(N), nrow = n.r, ncol=n.c)
+
+    head(X)
+
 
     ##             [,1]       [,2]       [,3]       [,4]
     ## [1,] -0.53875996 -3.0091503 -0.4308401  0.5664380
@@ -36,11 +36,10 @@ head(X)
 
 	
 Now we simulate missingness at random
-``` r
-X[sample(1:N, size = N/4)] <- NA
 
-head(X)
-```
+    X[sample(1:N, size = N/4)] <- NA
+    head(X)
+
 
     ##             [,1]       [,2]       [,3]       [,4]
     ## [1,] -0.53875996 -3.0091503         NA  0.5664380
