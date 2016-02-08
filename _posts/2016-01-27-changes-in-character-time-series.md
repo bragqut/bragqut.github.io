@@ -21,6 +21,7 @@ library(dplyr)
 
 First we're going to simulate some data that behaves the way we discussed above.
 <!---excerpt-break-->
+
 ``` r
 N <- 10
 
