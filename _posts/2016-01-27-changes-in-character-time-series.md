@@ -20,7 +20,7 @@ library(dplyr)
 ```
 
 First we're going to simulate some data that behaves the way we discussed above.
-
+<!---excerpt-break-->
 ``` r
 N <- 10
 
@@ -36,7 +36,8 @@ ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label)) + theme(legend.po
 ```
 
 ![Not paying attention to continuity of time series](/assets/detect_files/figure-markdown_github/unnamed-chunk-2-1.png)
- Obviously the grouping by the variable type here not only looks strange in `ggplot2` but we don't have an ID for unique instances of each label.
+
+Obviously the grouping by the variable type here not only looks strange in `ggplot2` but we don't have an ID for unique instances of each label.
 
 We will turn the input variable into a numeric vector and then look at where it changes. Loop over the endpoints and sequentially increase a counter index between the endpoints.
 
@@ -67,7 +68,8 @@ ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label, group=label.new)) 
 ```
 
 ![With new labels](/assets/detect_files/figure-markdown_github/unnamed-chunk-4-1.png)
- We can now summarise either by label without distinguising between unique instances or summarise by instance.
+
+We can now summarise either by label without distinguising between unique instances or summarise by instance.
 
 ``` r
 my.x %>% group_by(label) %>% summarise(mean = mean(y)) 
