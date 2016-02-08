@@ -34,6 +34,7 @@ my.x <- data.frame(label=rep(labels, times=n.each),
                    y = rnorm(n=sum(n.each)))
 
 ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label)) + theme(legend.position="bottom")
+
 ```
 
 ![Not paying attention to continuity of time series](/assets/detect_files/figure-markdown_github/unnamed-chunk-2-1.png)
