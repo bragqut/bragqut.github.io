@@ -35,7 +35,7 @@ my.x <- data.frame(label=rep(labels, times=n.each),
 ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label)) + theme(legend.position="bottom")
 ```
 
-![](assets/detect_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![Not paying attention to continuity of time series](/assets/detect_files/figure-markdown_github/unnamed-chunk-2-1.png)
  Obviously the grouping by the variable type here not only looks strange in `ggplot2` but we don't have an ID for unique instances of each label.
 
 We will turn the input variable into a numeric vector and then look at where it changes. Loop over the endpoints and sequentially increase a counter index between the endpoints.
@@ -66,7 +66,7 @@ Let's plot with our new labelling scheme
 ggplot(data=my.x, aes(x=x, y=y)) + geom_line(aes(color=label, group=label.new)) + theme(legend.position="bottom")
 ```
 
-![](assets/detect_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![With new labels](/assets/detect_files/figure-markdown_github/unnamed-chunk-4-1.png)
  We can now summarise either by label without distinguising between unique instances or summarise by instance.
 
 ``` r
