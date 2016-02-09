@@ -8,7 +8,7 @@ tags:
 
 This page is hosted on GitHub Pages, which means if you want to contribute to it you'll need a [GitHub](https://github.com) account. Once you've got one, you can either clone or download [our repository](https://github.com/bragqut/bragqut.github.io) add write new posts with R Markdown. The easiest way to do this is to use [RStudio](http://rstudio.com) (especially if you're writing R snippets) and go to File \ New File \ R Markdown...
 
-Use the following template as your markdown header and save as an `.Rmd` file with a title of the form `YYYY-MM-DD-title-of-file`. To ensure no conflicts in file names, 
+Use the following template as your markdown header and save as an `.Rmd` file with a title of the form `YYYY-MM-DD-username-title-of-file.Rmd`; this will ensure that even if two people write the same file on the same day that they do not overwrite each other's posts on committing.
 <!---excerpt-break-->
 
     ---
