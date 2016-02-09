@@ -33,3 +33,5 @@ You can also add your own author details in `_config.yml` so that when you list 
 Using either the GitHub desktop app or the command line interface, add the created files (the post's .md and tags' .md files) to your local git repository and commit changes with a meaningful message. If you're already a member of the `bragqut` team on GitHub you will be able to push directly to the repository. If you're not already a contributor to `bragqut/bragqut.github.io` you can submit a pull request and one of us will pull your changes in, or pester Sam to add you to the GitHub team.
 
 You can also fork the entire project and make your own website, as trying to build everything from the ground up can be time consuming (but it is rewarding).
+
+NB: a lot of tutorials for Jekyll usage may give you the impression that to use GitHub pages you need to install Jekyll (and therefore Ruby and a bunch of other stuff) on your local computer. All you need to be able to do is write `.md` files (or convert from `.Rmd` to `.md`) and push them to GitHub. Installing Jekyll is great for testing whether or not your changes will break the GitHub page, but it isn't always a painless process.
