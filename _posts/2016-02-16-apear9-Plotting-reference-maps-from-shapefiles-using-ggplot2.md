@@ -1,14 +1,3 @@
----
-layout: post
-title: Plotting reference maps from shapefiles using ggplot2
-author: apear
-tags:
- - ggplot2
- - r
- - visualisation
- - spatial
----
-
 Okay -- this is my first attempt at using markdown and Github, so bear with me.
 
 This is about plotting reference maps from shapefiles using ggplot2. But it's not just about plotting reference maps per se; it's about plotting the reference map over some sort of raster or other data layer, like you would in a GIS application.
@@ -17,11 +6,11 @@ I will show you the ggplot2 approach and how it avoids the problems inherent in 
 
 You need these packages: rgdal, sp, ggplot2
 
-`r   library(rgdal)    # to read in the shapefile`
+\`\`\`r library(rgdal) \# to read in the shapefile
 
-`r   library(sp)       # for Spatial* classes and coordinate projections`
+library(sp) \# for Spatial\* classes and coordinate projections
 
-`r   library(ggplot2)  # for visuallising the data`
+library(ggplot2) \# for visuallising the data \`\`\`
 
 To do what I have done with my data you will also need: gstat, dplyr
 
@@ -35,7 +24,7 @@ Since I'm using data that I derived from a publically available AIMS data produc
 
     ## [using ordinary kriging]
 
-![](2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 Based on Australian Institute of Marine Science data
 
@@ -60,7 +49,7 @@ GBR_feat <- spTransform(GBR_feat,
 plot(GBR_feat)
 ```
 
-![](2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Data courtesy of Great Barrier Reef Marine Park Authority
 
@@ -82,7 +71,7 @@ plot(ras)
 plot(GBR_feat, add = T)
 ```
 
-![](2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 This is awful. I'm sure I could improve it but the axis scales, the resolution, the colour scheme, the fact that the reference map is hollow -- I can't stand it. Some other method must be possible.
 
@@ -131,7 +120,7 @@ ggplot(data = as.data.frame(kbin.dec.anis),
        fill = "Temperature\n(degrees Celsius)")
 ```
 
-![](2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 It works! And it even looks good. The best thing about it is that ggplot2 kind of works like a GIS application. You can layer plots in whatever order you wish, simply using the "+". It is ideal for handling this kind of stuff.
 
