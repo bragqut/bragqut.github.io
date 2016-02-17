@@ -15,11 +15,11 @@ I will show you the ggplot2 approach and how it avoids the problems inherent in 
 
 You need these packages: rgdal, sp, ggplot2
 
-`r   library(rgdal)    # to read in the shapefile`
-
-`r   library(sp)       # for Spatial* classes and coordinate projections`
-
-`r   library(ggplot2)  # for visuallising the data`
+``` r
+library(rgdal)    # to read in the shapefile
+library(sp)       # for Spatial* classes and coordinate projections`
+library(ggplot2)  # for visuallising the data`
+```
 
 To do what I have done with my data you will also need: gstat, dplyr
 
