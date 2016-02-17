@@ -23,7 +23,7 @@ library(ggplot2)  # for visuallising the data`
 
 To do what I have done with my data you will also need: gstat, dplyr
 
-```r
+``` r
 library(gstat)     # to support geostatistical stuff
 library(dplyr)     # for aggregation of data
 ```
@@ -133,4 +133,4 @@ ggplot(data = as.data.frame(kbin.dec.anis),
 
 It works! And it even looks good. The best thing about it is that `ggplot2` kind of works like a GIS application. You can layer plots in whatever order you wish, simply using the `"+"`. It is ideal for handling this kind of stuff.
 
-One word of warning though: be careful about using xlim() and ylim(). For some reason they act like subset() functions which can mess up the polygon definition if you set either to be so small as to cut out part of the reference map.
+One word of warning though: be careful about using `xlim()` and `ylim()`. For some reason they act like `subset()` functions which can mess up the polygon definition if you set either to be so small as to cut out part of the reference map.
