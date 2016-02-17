@@ -23,25 +23,24 @@ library(ggplot2)  # for visuallising the data`
 
 To do what I have done with my data you will also need: gstat, dplyr
 
-`r  library(gstat)     # to support geostatistical stuff`
-
-`r  library(dplyr)     # for aggregation of data`
+```r
+library(gstat)     # to support geostatistical stuff
+library(dplyr)     # for aggregation of data
+```
 
 <!---excerpt-break-->
 
 I start by loading in and kriging my non-map data which will form my raster layer. It's a bit tedious and who cares so I will aim not to reveal the nuts and bolts of the process.
 
-Since I'm using data that I derived from a publically available AIMS data product, I'm obliged to do this:
+Since I'm using data that I derived from a publicly available AIMS data product, I'm obliged to do this:
 
-    ## [using ordinary kriging]
-
-![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 Based on Australian Institute of Marine Science data
 
-So now I have my raster layer, plotted using trellis graphics extended by the package sp.There is an output but no map to situate it.
+So now I have my raster layer, plotted using trellis graphics extended by the package `sp`. There is an output but no map to situate it.
 
-Now I'm going to get my reference map. It's a shapefile from DeepReef.org which details all the geomorphic features of the Great Barrier Reef and contains a map of Queensland. How handy!
+Now I'm going to get my reference map. It's a shapefile from [DeepReef.org](http://deepreef.org) which details all the geomorphic features of the Great Barrier Reef and contains a map of Queensland. How handy!
 
 ``` r
 # This is why you need rgdal.
@@ -60,11 +59,10 @@ GBR_feat <- spTransform(GBR_feat,
 plot(GBR_feat)
 ```
 
-![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![Data courtesy of Great Barrier Reef Marine Park Authority
+](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
-Data courtesy of Great Barrier Reef Marine Park Authority
-
-Now, combining the two plots is problematic. I can't just add one to the other, since spplot() is in the trellis family and plot() is in the base family. I wish they could just get along. :(
+Now, combining the two plots is problematic. I can't just add one to the other, since `spplot()` is in the trellis family and `plot()` is in the base family. I wish they could just get along. :(
 
 This is solution number 1: convert the kriging output to an actual raster and plot both the raster and the map using default plotting methods.
 
@@ -82,11 +80,11 @@ plot(ras)
 plot(GBR_feat, add = T)
 ```
 
-![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 This is awful. I'm sure I could improve it but the axis scales, the resolution, the colour scheme, the fact that the reference map is hollow -- I can't stand it. Some other method must be possible.
 
-Solution number 2: use spplot to plot the reference map.
+Solution number 2: use `spplot` to plot the reference map.
 
 ``` r
 # This is how you'd do it. Hint: this is also how you wouldn't do it.
@@ -94,11 +92,11 @@ spplot(kbin.dec.anis, "var1.pred") +
 spplot(GBR_feat) 
 ```
 
-It fails because of the way that spplot() handles its arguments.
+It fails because of the way that `spplot()` handles its arguments.
 
-So base plot sucks and trellis plot doesn't work. Where do we turn now? Or, rather, where should we have turned in the first place? To ggplot2, of course!
+So base plot sucks and trellis plot doesn't work. Where do we turn now? Or, rather, where should we have turned in the first place? To `ggplot2`, of course!
 
-Although the shapefile is not initially suitable for plotting in ggplot, ggplot2 has fortify() which handles a whole range of objects (e.g. linear models) to make them suitable for plotting. A shapefile read in as a SpatialPolygonsDataFrame is no exception.
+Although the shapefile is not initially suitable for plotting in `ggplot`, `ggplot2` has `fortify()` which handles a whole range of objects (e.g. linear models) to make them suitable for plotting. A shapefile read in as a `SpatialPolygonsDataFrame` is no exception.
 
 ``` r
 # The all important ggplot2
@@ -131,8 +129,8 @@ ggplot(data = as.data.frame(kbin.dec.anis),
        fill = "Temperature\n(degrees Celsius)")
 ```
 
-![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](/assets/2016-02-16-apear9-Plotting-reference-maps-from-shapefiles-using-ggplot2_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
-It works! And it even looks good. The best thing about it is that ggplot2 kind of works like a GIS application. You can layer plots in whatever order you wish, simply using the "+". It is ideal for handling this kind of stuff.
+It works! And it even looks good. The best thing about it is that `ggplot2` kind of works like a GIS application. You can layer plots in whatever order you wish, simply using the `"+"`. It is ideal for handling this kind of stuff.
 
 One word of warning though: be careful about using xlim() and ylim(). For some reason they act like subset() functions which can mess up the polygon definition if you set either to be so small as to cut out part of the reference map.
