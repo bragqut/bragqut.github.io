@@ -9,8 +9,6 @@ tags:
  - spatial
 ---
 
-Okay -- this is my first attempt at using markdown and Github, so bear with me.
-
 This is about plotting reference maps from shapefiles using ggplot2. But it's not just about plotting reference maps per se; it's about plotting the reference map over some sort of raster or other data layer, like you would in a GIS application.
 
 I will show you the ggplot2 approach and how it avoids the problems inherent in other approaches.
@@ -28,6 +26,8 @@ To do what I have done with my data you will also need: gstat, dplyr
 `r  library(gstat)     # to support geostatistical stuff`
 
 `r  library(dplyr)     # for aggregation of data`
+
+<!---excerpt-break-->
 
 I start by loading in and kriging my non-map data which will form my raster layer. It's a bit tedious and who cares so I will aim not to reveal the nuts and bolts of the process.
 
