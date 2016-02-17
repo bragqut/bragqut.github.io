@@ -10,7 +10,7 @@ You need these packages: rgdal, sp, ggplot2
 
 library(sp) \# for Spatial\* classes and coordinate projections
 
-library(ggplot2) \# for visuallising the data \`\`\`
+library(ggplot2) \# for visualising the data \`\`\`
 
 To do what I have done with my data you will also need: gstat, dplyr
 
