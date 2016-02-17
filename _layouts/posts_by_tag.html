@@ -27,6 +27,8 @@ layout: default
             </div><h3>{{ post_year }}</h3><div>
           {% endif %}
         {% endif %}
+		
+		{% assign author = site.authors[post.author] %}
 
         <a href="{{ site.baseurl }}{{ post.url }}">{{author.display_name}} - {{ post.title }}</a><br />
 
