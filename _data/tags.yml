@@ -21,3 +21,6 @@
 
 - slug: tidyr
   name: tidyr
+
+- slug: spatial
+  name: spatial
