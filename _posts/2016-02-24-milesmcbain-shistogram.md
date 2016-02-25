@@ -7,8 +7,7 @@ tags:
  - visualisation
 ---
 
-More than cheap wordplay
-========================
+### More than cheap wordplay
 
 I love `hist()`. It is both a go to plot for data exploration and a really simple way to dazzle users of Microsoft Excel. `base::hist()` is fast, both to type and in execution, but its downfall is you end up using it many times in a row while you fumble for the right bin width. All that fumbling can kill the magic.
 
