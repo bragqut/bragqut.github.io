@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Snippet
+title: Subsetting Dataframes by Column Name with Regular Expressions
 author: brfitzpatrick
 ---
 
