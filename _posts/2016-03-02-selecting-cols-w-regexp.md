@@ -80,22 +80,22 @@ Column names that follow some sort of system will make this example easier to un
 > 
 > colnames(Data) <- CN.df$CN
 ```
-we're now going to select columns using regular expressions 
+We're now going to select columns using regular expressions.
 
-let's practise this just with the column names themselve first
+Let's practise this just with the column names themselves first:
 
 ``` r
 > grep(pattern = 'Feb', x = colnames(Data))
  [1] 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
 [26] 52
-> 
-> # and we get the element numbers in the vector colnames(Data) that contain the string 'Feb' 
-> 
+```
+and we get the element numbers in the vector colnames(Data) that contain the string 'Feb' 
+``` r
 > colnames(Data)[grep(pattern = 'Feb', x = colnames(Data))]
  [1] "A_Feb" "B_Feb" "C_Feb" "D_Feb" "E_Feb" "F_Feb" "G_Feb" "H_Feb" "I_Feb"
 [10] "J_Feb" "K_Feb" "L_Feb" "M_Feb" "N_Feb" "O_Feb" "P_Feb" "Q_Feb" "R_Feb"
 [19] "S_Feb" "T_Feb" "U_Feb" "V_Feb" "W_Feb" "X_Feb" "Y_Feb" "Z_Feb"
-> 
+``` 
 > # these are also column numbers in the dataframe Data
 > 
 > head(Data[, grep(pattern = 'Feb', x = colnames(Data))])
