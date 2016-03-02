@@ -89,7 +89,7 @@ Let's practise this just with the column names themselves first:
  [1] 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
 [26] 52
 ```
-and we get the element numbers in the vector colnames(Data) that contain the string 'Feb'
+and we get the element numbers in the vector colnames(Data) that contain the string Feb
 
 
 ``` r
