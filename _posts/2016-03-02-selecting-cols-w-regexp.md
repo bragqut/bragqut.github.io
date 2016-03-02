@@ -10,16 +10,10 @@ Selecting columns of a dataframe with regular expressions.
 
 ### Code Snippet/Console Buffer Copy-Paste
 
-``` r
+Lets make a test set of data.
+Column names that follow some sort of system will make this example easier to understand.
 
-> # Using regular expressions to subset dataframes:
-> 
-> # Selecting Colunms:
-> 
-> # Lets make a test set of data:
-> 
-> # Column names that follow some sort of system will make this example easier to understand:
-> 
+``` r
 > CN.df <- expand.grid(LETTERS, month.abb)
 > 
 > head(CN.df)
@@ -85,11 +79,12 @@ Selecting columns of a dataframe with regular expressions.
 [1] 100 312
 > 
 > colnames(Data) <- CN.df$CN
-> 
-> # we're now going to select columns using regular expressions 
-> 
-> # let's practise this just with the column names themselve first
-> 
+```
+we're now going to select columns using regular expressions 
+
+let's practise this just with the column names themselve first
+
+``` r
 > grep(pattern = 'Feb', x = colnames(Data))
  [1] 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
 [26] 52
