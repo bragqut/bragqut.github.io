@@ -95,9 +95,9 @@ and we get the element numbers in the vector colnames(Data) that contain the str
  [1] "A_Feb" "B_Feb" "C_Feb" "D_Feb" "E_Feb" "F_Feb" "G_Feb" "H_Feb" "I_Feb"
 [10] "J_Feb" "K_Feb" "L_Feb" "M_Feb" "N_Feb" "O_Feb" "P_Feb" "Q_Feb" "R_Feb"
 [19] "S_Feb" "T_Feb" "U_Feb" "V_Feb" "W_Feb" "X_Feb" "Y_Feb" "Z_Feb"
-``` 
-> # these are also column numbers in the dataframe Data
-> 
+```
+these are also column numbers in the dataframe Data...
+``` r
 > head(Data[, grep(pattern = 'Feb', x = colnames(Data))])
           A_Feb      B_Feb      C_Feb       D_Feb      E_Feb      F_Feb
 [1,] -0.6841265 -1.1817348  1.6807043 -0.39257311 -0.9515360  0.8008152
@@ -134,26 +134,25 @@ and we get the element numbers in the vector colnames(Data) that contain the str
 [4,]  1.0302725  0.4518252
 [5,]  0.6680153  0.7511440
 [6,]  0.2369676 -0.6112372
-> 
-> # ok let's now extract all the column names that begin with F
-> 
-> # we can't just search for all column names that contain the upper case letter F because we'll get all the columns that contain 'Feb' in their names
-> 
+``` 
+Let's now extract all the column names that begin with F.
+Note: we can't just search for all column names that contain the upper case letter F because we'll get all the columns that contain 'Feb' in their names...
+``` r
 > colnames(Data)[grep(pattern = 'F', x = colnames(Data))]
  [1] "F_Jan" "A_Feb" "B_Feb" "C_Feb" "D_Feb" "E_Feb" "F_Feb" "G_Feb" "H_Feb"
 [10] "I_Feb" "J_Feb" "K_Feb" "L_Feb" "M_Feb" "N_Feb" "O_Feb" "P_Feb" "Q_Feb"
 [19] "R_Feb" "S_Feb" "T_Feb" "U_Feb" "V_Feb" "W_Feb" "X_Feb" "Y_Feb" "Z_Feb"
 [28] "F_Mar" "F_Apr" "F_May" "F_Jun" "F_Jul" "F_Aug" "F_Sep" "F_Oct" "F_Nov"
 [37] "F_Dec"
-> 
-> # we need a simple regular expression
-> 
+```
+we need a simple regular expression
+``` r
 > colnames(Data)[grep(pattern = '^F', x = colnames(Data))]
  [1] "F_Jan" "F_Feb" "F_Mar" "F_Apr" "F_May" "F_Jun" "F_Jul" "F_Aug" "F_Sep"
 [10] "F_Oct" "F_Nov" "F_Dec"
-> 
-> # the ^ means start of line
-> 
+```
+the ^ means start of line
+``` r
 > F.Data <- Data[,grep(pattern = '^F', x = colnames(Data))]
 > 
 > head(F.Data)
@@ -171,9 +170,9 @@ and we get the element numbers in the vector colnames(Data) that contain the str
 [4,] -0.28482266 -1.4338899 -0.4850225 -1.3333187  0.18724145 -0.26304415
 [5,]  0.26891692  1.3171009  0.4208927 -0.4915738 -0.92508066  0.03629915
 [6,] -0.55537607  1.3738066  1.4363442 -2.3209636  0.90170461 -0.20421596
-> 
-> # perhaps we no longer want all the columns in F.Data to have column names the start with F_
-> 
+``` 
+perhaps we no longer want all the columns in F.Data to have column names the start with F_
+``` r 
 > F.Data.CN <- unlist(strsplit(x = colnames(F.Data), split = '_'))
 > 
 > F.Data.CN[!F.Data.CN == 'F']
@@ -196,9 +195,10 @@ and we get the element numbers in the vector colnames(Data) that contain the str
 [4,] -0.28482266 -1.4338899 -0.4850225 -1.3333187  0.18724145 -0.26304415
 [5,]  0.26891692  1.3171009  0.4208927 -0.4915738 -0.92508066  0.03629915
 [6,] -0.55537607  1.3738066  1.4363442 -2.3209636  0.90170461 -0.20421596
-> 
-> # how about some slightly more involved regular expression
-> 
+```
+
+How about some slightly more involved regular expressions?
+``` r 
 > colnames(Data)[grep(pattern = '(^F|^Z).Feb$', x = colnames(Data))]
 [1] "F_Feb" "Z_Feb"
 > 
@@ -213,12 +213,11 @@ and we get the element numbers in the vector colnames(Data) that contain the str
 [4,]  0.6619927  0.4518252 -1.46774735 -1.477020 -0.923580718  0.4603256
 [5,]  0.2553364  0.7511440 -0.02558555  1.215124  1.644321061 -1.9630911
 [6,] -0.5330454 -0.6112372 -0.11360542 -1.192837  0.758702611  0.2811076
-> 
-> # that concludes this example
-> 
-> # read more about regular expressions in R with
-> ?regexp
+``` 
+That concludes this example.
 
+Read more about regular expressions in R with:
+``` r
+> ?regexp
 ```
 
-here endeth the post.
