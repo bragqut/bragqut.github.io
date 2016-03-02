@@ -8,7 +8,7 @@ author: brfitzpatrick
 ### Description
 Selecting columns of a dataframe with regular expressions.
 
-### Code Snippet/Console Buffer Copy-Paste
+### Code Snippet/Console Buffer Yank
 
 Lets make a test set of data.
 Column names that follow some sort of system will make this example easier to understand.
