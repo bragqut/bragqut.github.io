@@ -91,6 +91,7 @@ Let's practise this just with the column names themselves first:
 ```
 and we get the element numbers in the vector colnames(Data) that contain the string 'Feb'
 
+
 ``` r
 > colnames(Data)[grep(pattern = 'Feb', x = colnames(Data))]
  [1] "A_Feb" "B_Feb" "C_Feb" "D_Feb" "E_Feb" "F_Feb" "G_Feb" "H_Feb" "I_Feb"
