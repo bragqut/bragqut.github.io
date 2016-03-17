@@ -35,7 +35,11 @@ Column names that follow some sort of system will make this example easier to un
 312    Z  Dec
 > 
 > CN.df$CN <- paste(CN.df$Var1, CN.df$Var2, sep = '_')
-> 
+```
+
+<!---excerpt-break-->
+
+``` r
 > CN.df$CN
   [1] "A_Jan" "B_Jan" "C_Jan" "D_Jan" "E_Jan" "F_Jan" "G_Jan" "H_Jan" "I_Jan"
  [10] "J_Jan" "K_Jan" "L_Jan" "M_Jan" "N_Jan" "O_Jan" "P_Jan" "Q_Jan" "R_Jan"
