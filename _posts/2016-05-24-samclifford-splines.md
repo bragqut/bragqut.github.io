@@ -180,7 +180,7 @@ Results
 
 If we didn't penalise our spline, we would have the model
 
-![](/assets/bayestip_files/equations/identitymodel.gif)
+\centerline{\includegraphics[width=4in]{/assets/bayestip_files/equations/identitymodel.gif}}
 
 where *I*<sub>*K*</sub> is the *K* × *K* identity matrix, and the resulting smooth would look like
 
