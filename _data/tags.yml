@@ -24,3 +24,12 @@
 
 - slug: spatial
   name: spatial
+
+- slug: bayes
+  name: bayes
+
+- slug: regression
+  name: regression
+
+- slug: jags
+  name: JAGS
