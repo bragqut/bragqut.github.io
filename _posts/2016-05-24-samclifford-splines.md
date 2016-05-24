@@ -148,7 +148,7 @@ Fitting the model
 
 For our simple univariate spline, we fit the model
 
-![](/assets/bayestip_files/equations/penalisedmodel.gif)
+<img src="/assets/bayestip_files/equations/penalisedmodel.gif" height="170">
 
 The following model code was used in JAGS to fit the above model:
 
@@ -180,7 +180,7 @@ Results
 
 If we didn't penalise our spline, we would have the model
 
-<img src="/assets/bayestip_files/equations/identitymodel.gif" width="200">
+<img src="/assets/bayestip_files/equations/identitymodel.gif" height="170">
 
 where *I*<sub>*K*</sub> is the *K* × *K* identity matrix, and the resulting smooth would look like
 
