@@ -12,6 +12,8 @@ tags:
 Sometimes you don't know the functional form of a regression relationship. In such an instance, the use of a penalised spline regression can help you model it without having a ridiculously wiggly smooth function.
 
 <!---excerpt-break-->
+
+
 Motivation
 ==========
 
@@ -29,7 +31,7 @@ gg.data <- ggplot(data=dat, aes(x=x, y=y)) +
   geom_point( alpha=0.5) + theme_bw()
 ```
 
-<img src="../assets/bayestip_files/figure-markdown_github/unnamed-chunk-2-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="assets/bayestip_files/figure-markdown_github/unnamed-chunk-2-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 Splines
 =======
@@ -101,7 +103,7 @@ X.pred <- bspline(x.pred, K, xl=0, xr=1)
 
 What does our basis look like?
 
-<img src="../assets/bayestip_files/figure-markdown_github/unnamed-chunk-5-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="assets/bayestip_files/figure-markdown_github/unnamed-chunk-5-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 Formulating penalty matrix
 --------------------------
@@ -179,7 +181,7 @@ The following model code was used in JAGS to fit the above model:
 Results
 -------
 
-<img src="../assets/bayestip_files/figure-markdown_github/unnamed-chunk-9-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="assets/bayestip_files/figure-markdown_github/unnamed-chunk-9-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 If we didn't penalise our spline, we would have the model
 
@@ -192,7 +194,7 @@ y_i \sim & N\left( \mu_i, \tau_y \right) \\
 \end{align*}
 where *I*<sub>*K*</sub> is the *K* × *K* identity matrix, and the resulting smooth would look like
 
-<img src="../assets/bayestip_files/figure-markdown_github/unnamed-chunk-11-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="assets/bayestip_files/figure-markdown_github/unnamed-chunk-11-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 This fitted smooth is much more wiggly than the penalised smooth
 
