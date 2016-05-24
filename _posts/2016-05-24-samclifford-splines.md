@@ -148,13 +148,8 @@ Fitting the model
 
 For our simple univariate spline, we fit the model
 
-\begin{align*}
-y_i \sim & N\left( \mu_i, \tau_y \right) \\
-\mu_i = & X \mathbf{\beta} \\
-\beta \sim & MVN\left( \mathbf{1}\beta_0, \lambda Q \right) \\
-\tau_y, \lambda \sim & \Gamma\left(0.001, 0.001\right) \\
-\beta_0 \sim & N \left(0, 10^{-6} \right)
-\end{align*}
+![](assets/bayestip_files/equations/penalisedmodel.gif)
+
 The following model code was used in JAGS to fit the above model:
 
     model{
@@ -185,13 +180,8 @@ Results
 
 If we didn't penalise our spline, we would have the model
 
-\begin{align*}
-y_i \sim & N\left( \mu_i, \tau_y \right) \\
-\mu_i = & X \mathbf{\beta} \\
-\beta \sim & MVN\left( \mathbf{1}\beta_0, \lambda I_K \right) \\
-\tau_y, \lambda \sim & \Gamma\left(0.001, 0.001\right) \\
-\beta_0 \sim & N \left(0, 10^{-6} \right)
-\end{align*}
+![](assets/bayestip_files/equations/identitymodel.gif)
+
 where *I*<sub>*K*</sub> is the *K* × *K* identity matrix, and the resulting smooth would look like
 
 <img src="assets/bayestip_files/figure-markdown_github/unnamed-chunk-11-1.png" title="" alt="" style="display: block; margin: auto;" />
