@@ -5,7 +5,7 @@ author: samclifford
 tags:
  - r
  - bayes
- - JAGS
+ - jags
  - regression
 ---
 
