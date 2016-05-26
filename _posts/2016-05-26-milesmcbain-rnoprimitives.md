@@ -25,8 +25,7 @@ and clear like for old school coders like me:
 
 **R has no primitive types.**
 
-No seriously. Everything is an object. Integers and floats are always
-numeric vectors, even when then are 1 just one element long. EVEN bloody
+No seriously. Everything is an object. Integers, floats, and EVEN
 boolean values which can be represented by a single bit in memory are
 objects. check this out:
 
